@@ -21,7 +21,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:id="@+id/textView1"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="false"
@@ -34,7 +33,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
             android:id="@+id/textView2"
             android:layout_alignParentLeft="false"
             android:layout_marginLeft="118dp"
@@ -46,7 +44,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ابدا"
+            android:text="@string/start"
             android:id="@+id/buttonSync"
             android:layout_alignParentLeft="false"
             android:layout_marginLeft="236dp"
@@ -56,6 +54,17 @@
             android:layout_alignParentRight="true"
             android:textSize="20sp"
             android:onClick="startSync" />
+
+        <ProgressBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar1"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:progress="0"
+            android:max="50"
+            style="?android:attr/progressBarStyleHorizontal" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -69,7 +78,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:id="@+id/textView3"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="false"
@@ -82,20 +90,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
             android:id="@+id/textView4"
             android:layout_alignParentLeft="false"
             android:layout_marginLeft="118dp"
             android:layout_alignParentTop="false"
             android:layout_marginTop="31dp"
             android:layout_centerInParent="true"
-            android:textSize="20sp"
-            tools:ignore="RtlHardcoded" />
+            android:textSize="20sp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ابدا"
+            android:text="@string/start"
             android:id="@+id/buttonAsync"
             android:layout_alignParentLeft="false"
             android:layout_marginLeft="236dp"
@@ -104,17 +110,25 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textSize="20sp"
-            android:onClick="startAsync"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+            android:onClick="startAsync" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar2"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:progress="0"
+            android:max="50" />
     </RelativeLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="مسح"
+        android:text="@string/clear"
         android:id="@+id/buttonClear"
         android:textSize="20sp"
         android:onClick="startClear"
-        tools:ignore="HardcodedText,RtlHardcoded"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
